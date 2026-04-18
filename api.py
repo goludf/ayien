@@ -25,7 +25,8 @@ active_attacks = {}
 active_attacks_lock = threading.Lock()
 
 def get_current_utc():
-    return datetime.now(timezone.utc)
+    return datetime.utcnow().replace(tzinfo=None)
+
 
 # ========== BOT ENDPOINTS ==========
 @app.route('/api/bot/register', methods=['POST'])
