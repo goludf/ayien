@@ -1,0 +1,4 @@
+flask
+pymongo
+dnspython
+requests==2.31.0
